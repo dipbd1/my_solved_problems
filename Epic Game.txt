@@ -1,0 +1,58 @@
+#include <stdio.h>
+main()
+{
+    int s, as, heap, temp1, temp2, temp3, remain, temp4, gcd;
+    while(scanf("%d %d %d", &s, &as, &heap)==3)
+    {
+        while(1)
+        {
+            temp2=heap;
+            temp3=s;
+            while(1)
+            {
+                if(temp2==0)
+                {
+                    gcd=temp3;
+                    break;
+                }
+                else
+                {
+                    temp4=temp2;
+                    temp2=temp3%temp2;
+                    temp3=temp4;
+                }
+            }
+            temp1=gcd;
+            heap=heap-temp1;
+            if(heap==0)
+            {
+                printf("0\n");
+                break;
+            }
+            temp2=heap;
+            temp3=as;
+            while(1)
+            {
+                if(temp2==0)
+                {
+                    gcd=temp3;
+                    break;
+                }
+                else
+                {
+                    temp4=temp2;
+                    temp2=temp3%temp2;
+                    temp3=temp4;
+                }
+            }
+            temp1=gcd;
+            heap=heap-temp1;
+            if(heap==0)
+            {
+                printf("1\n");
+                break;
+            }
+        }
+    }
+    return 0;
+}

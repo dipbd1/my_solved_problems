@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    int a, b, i;
+    char c[50];
+    while(scanf("%d", &a)==1)
+    {
+        b=a;
+        scanf("%s", c);
+        for(i=0;i<a;i++)
+        {
+            if(c[i]==c[i+1])
+            {
+            }
+            else
+            {
+                b--;
+            }
+        }
+        printf("%d", b);
+    }
+    return 0;
+}

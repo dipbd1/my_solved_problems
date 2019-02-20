@@ -1,0 +1,38 @@
+#include<stdio.h>
+main()
+{
+    int a, b, i, temp, xtra, xtra1, counter, counter1;
+    while(scanf("%d", &a)==1)
+    {
+        temp=a;
+        for(i=4;i<=a;i++)
+        {
+            counter=0;
+            counter1=0;
+            xtra=i;
+            xtra1=a-i;
+            if(xtra%2!=0 && xtra>4)
+            {
+                counter++;
+            }
+            if(xtra%3!=0 && xtra>4)
+            {
+                counter++;
+            }
+            if(xtra1%2!=0 && xtra1>4)
+            {
+                counter1++;
+            }
+            if(xtra1%3!=0 && xtra1>4)
+            {
+                counter1++;
+            }
+            if(counter<2 && counter1<2)
+            {
+                printf("%d %d\n", xtra, xtra1);
+                break;
+            }
+        }
+    }
+    return 0;
+}

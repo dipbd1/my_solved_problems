@@ -1,0 +1,35 @@
+#include<stdio.h>
+main()
+{
+    int t, high, low, i, counterh, counterl;
+    int num[100];
+    while(scanf("%d",&t)==1)
+    {
+        high=0;
+        low=200;
+        for(i=0; i<t; i++)
+        {
+            scanf("%d", &num[i]);
+            if(num[i]>high)
+            {
+                high=num[i];
+                counterh=i;
+            }
+            if(num[i]<=low)
+            {
+                low=num[i];
+                counterl=i;
+            }
+        }
+        if(counterl<counterh)
+        {
+            counterl=counterl+2;
+        }
+        else
+        {
+            counterl++;
+        }
+        printf("%d\n", counterh+(t-counterl));
+    }
+    return 0;
+}

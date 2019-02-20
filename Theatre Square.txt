@@ -1,0 +1,35 @@
+#include<stdio.h>
+main()
+{
+    long long int row, column, square, xtra, xtra2;
+    while(scanf("%lld %lld %lld", &row, &column, &square)!=EOF)
+    {
+        xtra=0;
+        xtra2=0;
+        if(square==1)
+        {
+            printf("%lld\n", row*column);
+        }
+        else
+        {
+            if((row%square)>0)
+            {
+                xtra=(row/square)+1;
+            }
+            else
+            {
+                xtra=row/square;
+            }
+            if((column%square)>0)
+            {
+                xtra2=(column/square)+1;
+            }
+            else
+            {
+                xtra2=column/square;
+            }
+            printf("%lld\n", xtra*xtra2);
+        }
+    }
+    return 0;
+}

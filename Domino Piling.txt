@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+main()
+{
+    long long int row, column, i;
+    while(scanf("%lld %lld", &row, &column)==2)
+    {
+        i=(row*column)/2;
+        printf("%lld\n", i);
+    }
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char c[20];
+    int t, length, i, j, kase=0, counter;
+    scanf("%d", &t);
+    while(t-- && scanf("%s", c)==1)
+    {
+        counter=0;
+        kase++;
+        length=strlen(c);
+        for(i=0, j=length-1;i<=j;i++,j--)
+        {
+            if(c[i]!=c[j])
+            {
+                counter++;
+            }
+        }
+        if(counter>0)
+        {
+            printf("Case %d: No\n", kase);
+        }
+        else
+        {
+            printf("Case %d: Yes\n", kase);
+        }
+
+    }
+    return 0;
+}

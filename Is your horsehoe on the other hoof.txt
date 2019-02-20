@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    long int hh[6];
+    int i, j, counter=0;
+    for(i=0;i<4;i++)
+    {
+        scanf("%ld", &hh[i]);
+    }
+    for(i=0;i<4;i++)
+    {
+        for(j=i+1;j<4;j++)
+        {
+            if(hh[i]==hh[j])
+            {
+                counter++;
+                break;
+            }
+        }
+    }
+    printf("%ld\n", counter);
+    return 0;
+}

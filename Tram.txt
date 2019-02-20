@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+main()
+{
+    int a, b, i,c,d;
+    while(scanf("%d", &a)==1)
+    {
+        d=0;c=0;
+        for(i=1;i<=a*2;i++)
+        {
+            scanf("%d", &b);
+            if(i%2==1)
+            {
+                c=c-b;
+            }
+            else
+            {
+                c=c+b;
+            }
+            if(d<c)
+            {
+                d=c;
+            }
+        }
+        printf("%d\n", d);
+    }
+    return 0;
+}

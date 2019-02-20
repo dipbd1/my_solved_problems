@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    int a, b, i,counter, counter1;
+    char c[100];
+    while(scanf("%s", c)==1)
+    {
+        counter=1;
+        counter1=0;
+        a=strlen(c);
+        for(i=0; i<a; i++)
+        {
+            if(c[i]==c[i+1])
+            {
+                counter++;
+            }
+
+            else
+            {
+                counter=1;
+            }
+            if(counter==7)
+            {
+                counter1++;
+            }
+        }
+        if(counter1>0)
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+    }
+    return 0;
+}

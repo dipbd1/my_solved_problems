@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    long int a, b, i;
+    char c[120], c1[120];
+    while(scanf("%s", c)==1)
+    {
+        b=strlen(c);
+        scanf("%s", c1);
+        for(i=0; i<b; i++)
+        {
+            if(c[i]>96)
+            {
+                c[i]=c[i]-32;
+            }
+            if(c1[i]>96)
+            {
+                c1[i]=c1[i]-32;
+            }
+        }
+        a=strcmp(c,c1);
+        printf("%ld\n", a);
+    }
+    return 0;
+}

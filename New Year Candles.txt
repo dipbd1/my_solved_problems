@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+    int a, b, temp, i, remainder,sum;
+    while(scanf("%d %d", &a, &b)==2)
+    {
+        sum=a;
+        while(a>=b)
+        {
+            temp=(a/b);
+            sum=sum+temp;
+            remainder=(a%b);
+            a=temp+remainder;
+        }
+        printf("%d\n", sum);
+
+    }
+    return 0;
+}

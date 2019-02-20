@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    int i, j,counter, length;
+    char s[105];
+    char t[105];
+    while(scanf("%s", s)==1)
+    {
+        scanf("%s", t);
+        counter=0;
+        length=strlen(s);
+        for(i=0, j=length-1;i<length,j>=0;i++,j--)
+        {
+            if(s[i]==t[j])
+            {
+                counter++;
+            }
+        }
+        if(counter==length)
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+
+    }
+    return 0;
+}

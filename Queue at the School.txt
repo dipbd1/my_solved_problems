@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    char line[50];
+    int i, line_num,scnd, length;
+    while(scanf("%d %d", &line_num, &scnd)==2)
+    {
+        scanf("%s", line);
+        while(scnd--)
+        {
+            for(i=0;i<line_num-1;i++)
+            {
+                if(line[i]=='B' && line[i+1]=='G')
+                {
+                    line[i]='G';
+                    line[i+1]='B';
+                    i++;
+                }
+            }
+        }
+        printf("%s\n", line);
+        strcpy(line,"\0");
+    }
+    return 0;
+}
